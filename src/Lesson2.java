@@ -10,12 +10,14 @@ public class Lesson2 {
         numbers[4] =10;
         numbers[5] =12;
 
-        numbers[6] = 66;
+//        numbers[6] = 66;
 
         int num = 0;
 
         for(int i = 0; i < numbers.length; i++){
 //            System.out.println(i);
+            int arrayLength = numbers.length;
+
             numbers[i] = num + 2;
 //            num = num + 2;   => num += 2;
             num += 2;
@@ -34,6 +36,8 @@ public class Lesson2 {
 
         System.out.println(Arrays.toString(newNumbers));
         newNumbers = numbers;
+
+
 
 
     }
