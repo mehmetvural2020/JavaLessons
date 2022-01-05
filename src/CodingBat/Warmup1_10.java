@@ -1,7 +1,10 @@
 package CodingBat;
 
-public class Warmup1 {
+public class Warmup1_10 {
+    int number = 15;
     public static void main(String[] args) {
+        Warmup1_10 objWormUp1 = new Warmup1_10();
+
         System.out.println(sleepIn(true, true));
         boolean result = sleepIn(true, false); // → true
         System.out.println(result);
@@ -14,7 +17,23 @@ public class Warmup1 {
         if(result) System.out.println("We are in trouble.");
         else System.out.println("We are not in trouble.");
 
+        System.out.println(posNeg(3, 5, true));
+        boolean posNegReturn = posNeg(5,7,false);
+        System.out.println(posNegReturn);
+
+//        missingChar();
+        objWormUp1.missingChar("Ahmet", 4);
+        System.out.println(objWormUp1.number);
+        int newNumber = objWormUp1.number;
+        System.out.println(newNumber);
+        objWormUp1.number=25;
+        System.out.println(objWormUp1.number);
+//        Warmup1.number = 25;
+//        System.out.println(Warmup1.number);
     }
+
+//    private static void missingChar() {
+//    }
 
     /*The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation.
     We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.
@@ -142,7 +161,27 @@ public class Warmup1 {
         else return "not" + str;
     }
 
+/*Given a non-empty string and an int n, return a new string where the char at index n has been removed.
+The value of n will be a valid index of a char in the original string
+(i.e. n will be in the range 0..str.length()-1 inclusive).
 
+    missingChar("k i tten", 1) → "ktten"
+    missingChar(" k itten", 0) → "itten"
+    missingChar("kitt e n", 4) → "kittn"*/
+
+    public String missingChar(String str, int n) {
+        String newStr="";
+        for(int i = 0; i < str.length(); i++){
+            if(i != n) {
+                newStr = newStr + str.substring(i, i+1); // k+i+t+t -(e) + n --> kittn
+            }
+        }
+
+        newStr = str.substring(0,n) + str.substring(n+1,str.length());
+        return newStr;
+
+
+    }
 
 
 }
