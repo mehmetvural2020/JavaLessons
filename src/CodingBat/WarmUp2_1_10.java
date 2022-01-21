@@ -5,12 +5,6 @@ public class WarmUp2_1_10 {
 
     }
 
-    /*Given a string and a non-negative int n, return a larger string that is n copies of the original string.
-
-    stringTimes("Hi", 2) → "HiHi"
-    stringTimes("Hi", 3) → "HiHiHi"
-    stringTimes("Hi", 1) → "Hi"*/
-
 
     /*Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars,
     or whatever is there if the string is less than length 3. Return n copies of the front;
