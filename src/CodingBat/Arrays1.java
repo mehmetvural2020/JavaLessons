@@ -11,6 +11,10 @@ public class Arrays1 {
 
         int totalNumbers = sumNumbers(3,5);
         System.out.println(totalNumbers);
+        String str = " CAT and dog and wolf ";
+        int ind1 = str.indexOf("A");
+        System.out.println(ind1);
+        System.out.println(str.trim());
     }
 
     /*Given an array of ints, return true if 6 appears as either the first or last element in the array.
